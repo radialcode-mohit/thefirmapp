@@ -593,18 +593,64 @@ svg path {
   display: inline-block;
   position: relative;
 }
-.mainslider .slick-current {
-  background-image: url(../src/assets/images/png/currentcrlce.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.mainslider .slick-current img {
+  opacity: 1 !important;
 }
-.mainslider .slick-current + div {
-  max-width: 118px;
+.crcles_pos {
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0;
 }
-.mainslider .slick-current + div + div {
-  max-width: 62px;
+.qutoes_pos {
+  max-width: 50px !important;
+  bottom: 0;
+  right: 20%;
+  opacity: 0;
 }
-
+.mainslider img {
+  max-width: 90px;
+}
+.max_w_890 {
+  max-width: 890px;
+}
+.slick-center {
+  transform: scale(2);
+}
+.slick-center + div {
+  transform: scale(1.5);
+  margin-left: 50px;
+}
+.mainslider .slick-slide img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-slide {
+  padding: 50px 0;
+}
+.mainslider .slick-arrow {
+  display: none !important;
+}
+.slick-active:has(+ .slick-center) {
+  transform: scale(1.5);
+  margin-right: 50px;
+}
+.slick-cloned {
+  transform: scale(0.5);
+}
+.slick-current + div + div {
+  transform: scale(0.9);
+}
+.slick-current .qutoes_pos {
+  opacity: 1 !important;
+}
+.slick-current img {
+  padding-top: 5px;
+}
+.slick-dots {
+  bottom: -129% !important;
+}
 @keyframes toptobottom {
   50% {
     transform: translateY(-20px);
@@ -615,6 +661,22 @@ svg path {
 }
 .z_index_1000 {
   z-index: 1000;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 18px !important;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.4;
+  color: #faca10 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 576px) {
   :root {
@@ -767,6 +829,19 @@ svg path {
   }
   .w_xsm_80per {
     width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .qutoes_pos {
+    right: 33%;
+  }
+  .slick-dots {
+    bottom: -135% !important;
+  }
+}
+@media (min-width: 400px) and (max-width: 576px) {
+  .slick-dots {
+    bottom: -110% !important;
   }
 }
 @media (min-width: 991.98px) {

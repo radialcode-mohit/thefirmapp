@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import FooterSec from "./FooterSec";
 const GetInTouch = () => {
   return (
-    <section>
+    <section className="mt-lg-5 pt-lg-5">
       <div className="map_bg">
         <div className="pt-5"></div>
         <div className="pt-5"></div>
